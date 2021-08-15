@@ -1,0 +1,81 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image:linear-gradient(130deg,#FFFFFF, #1C3F80);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.container{
+    display: flex;
+    background-color: #FFFFFF   ;
+    border-radius: 1px;
+    padding: 15px;
+    width: 30%; 
+}
+input{
+    flex-grow: 1;
+    outline: 0;
+    height: 30px;
+    font-size: 1rem;
+    border: none;
+   
+    color: #1C3F80;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius:5px;
+    height: 100%;
+    width: 33%;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    
+}
+li{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    
+}
+i{
+    pointer-events: none;
+}
+.class-item{
+    flex-grow: 1;
+}
+button:hover{
+    background-color:lightcoral;
+    color: white;
+}
+#clear{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    width: 70px;
+}
+#delete{
+    width: 30px;
+}
+.classList{
+    display: nones;
+}
+#date{
+    width: 80px;
+}
+.li-list{
+    margin:10px 0;
+    background-color: #2b63ca;
+    color: rgb(3, 3, 3);
+    font-weight: 100px;
+}
+.li-color{
+    background-color: yellow;
+}
