@@ -79,3 +79,6 @@ button:hover{
 .li-color{
     background-color: yellow;
 }
+#edit{
+    display: none;
+}

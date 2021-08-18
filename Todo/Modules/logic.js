@@ -7,10 +7,11 @@ export const addTodoItems = (name, submittedListDate) => {
   if(!name) {
     throw new Error('Name is required')
 }
-else{let ul = document.querySelector("ul");
+else{
+  let ul = document.querySelector("ul");
 let li = document.createElement("li");
 
-li.innerHTML = ` <span class="class-item"> ${name}</span> <br>
+li.innerHTML = `<span class="class-item"> ${name}</span> <br>
       <span>  ${submittedListDate}</span>
 
   <button name='edit'> <i class="uil uil-edit"></i></i> </button>    
@@ -40,9 +41,7 @@ return newTodoItem;
 
 
 }
-export const alert = (e) =>{
-  return alert("Please enter todolist")
-}
+
 /*--- -------- For Removing All Todo Items-------- ---*/
 
 export const clearAll = (e) => {
@@ -68,6 +67,7 @@ export const removeEditAndCheckList = (e) => {
 /*--- For Deleting items ---*/
 const deleteTodo = (e) => {
   let item = e.target.parentNode;
+  
   item.remove();
 };
 /*--- For Checking items ---*/
@@ -84,5 +84,21 @@ const checkTodo = (e) => {
 
 /*--- For Editing items ---*/
 const editTodo = (e) =>{
-  alert("you just click edit")
+  let input = document.querySelector('input')  
+  let addButton = document.getElementById('add')
+  let editButton = document.getElementById('edit')
+
+  let edit = e.target.parentNode.firstChild.innerHTML;
+  input.value = edit
+  addButton.style.display ='none '
+  editButton.style.display = 'block'
+
+
+}
+
+export const editButtonLogic =(e)=>{
+  let input = document.querySelector('input').value
+  console.log(input)
+  addTodoItems(input)
+
 }
